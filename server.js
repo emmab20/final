@@ -54,11 +54,8 @@ mongoose
 			console.log(req.body);
 
 			const product = new products({
-				title: req.body.title,
-				description: req.body.description,
-				category: req.body.category,
+				name: req.body.name,
 				image: req.body.image,
-				rating: req.body.rating,
 				price: req.body.price,
 			});
 
@@ -82,24 +79,12 @@ mongoose
 				console.log(product);
 				console.log(req.body);
 
-				if (req.body.title) {
-					product.title = req.body.title;
-				}
-
-				if (req.product.description) {
-					product.description = req.body.description;
-				}
-
-				if (req.product.category) {
-					product.category = req.body.category;
+				if (req.body.name) {
+					product.name = req.body.name;
 				}
 
 				if (req.body.image) {
 					product.image = req.body.image;
-				}
-
-				if (req.body.rating) {
-					product.rating = req.body.rating;
 				}
 
 				if (req.body.price) {

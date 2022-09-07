@@ -7,11 +7,8 @@ const mongoose = require("mongoose");
 const schema = mongoose.Schema(
 	{
 		//_id: mongoose.ObjectId,
-		title: String,
-		description: String,
-		category: String,
+		name: String,
 		image: String,
-		rating: Number,
 		price: Number,
 	},
 	{ collection: "Products" }
