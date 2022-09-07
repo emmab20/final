@@ -1,10 +1,15 @@
 import Header from './Components/Header';
 import Main from './Components/Main';
 import Basket from './Components/Basket';
-import data from './data';
+
+import useGetRequest from './Components/useGetRequest'; 
 import { useState } from 'react';
 function App() {
-  const { products } = data;
+  const {
+    data: products,
+    isLoading,
+    errorMessage,
+  } = useGetRequest("http://localhost:7000/products/");
   const [cartItems, setCartItems] = useState([]);
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
