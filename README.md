@@ -4,6 +4,7 @@
 
 ### Database Setup
 - Install MongoDB
+- Create a Database called "Final"
 - Create a Collection called "Products"
 - Import data.json
 

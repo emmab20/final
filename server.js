@@ -7,11 +7,11 @@ const cors = require("cors");
 
 const path = require("path");
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/Final";
 const PORT = process.env.PORT || 7000;
 
 mongoose
-	.connect("mongodb://localhost:27017/", { useNewUrlParser: true })
+	.connect("mongodb://localhost:27017/Final", { useNewUrlParser: true })
 	.then(() => {
 		// create a backend server that will listen to our requests
 		// listen for the products path (req.url: /products)
